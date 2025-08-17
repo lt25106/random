@@ -1,3 +1,5 @@
+// also works in c++
+
 #include <stdio.h> // Standard input/output library
 #include <stdlib.h> // Standard library for general functions
 #include <time.h> // Library for time functions
