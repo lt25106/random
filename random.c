@@ -15,7 +15,7 @@ int main() {
     if (guess < answer) {
       printf("Too low\n");
     } else if (guess > answer) {
-      printf("Too hig h\n");
+      printf("Too high\n");
     } else {
       printf("Correct!\n");
       printf("Guesses taken: %d\n", counter);
