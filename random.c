@@ -15,11 +15,11 @@ int main() {
     printf("Guess the number between 0 and 100 inclusive: "); // Example: printing to console
     scanf("%d", &guess);
     if (guess < answer) {
-      printf("Too low\n");
+      puts("Too low");
     } else if (guess > answer) {
-      printf("Too high\n");
+      puts("Too high");
     } else {
-      printf("Correct!\n");
+      puts("Correct!");
       printf("Guesses taken: %d\n", counter);
       break;
     }
