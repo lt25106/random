@@ -1,18 +1,18 @@
-// also works in c++
+// works in c++
 
-#include <stdio.h> // Standard input/output library
-#include <stdlib.h> // Standard library for general functions
-#include <time.h> // Library for time functions
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 int main() {
   srand(time(NULL));  
   
-  int answer = rand() % 101; // Generate a random number
+  int answer = rand() % 101;
   int guess;
   int counter = 1;
 
   while (1) {
-    printf("Guess the number between 0 and 100 inclusive: "); // Example: printing to console
+    printf("Guess the number between 0 and 100 inclusive: ");
     scanf("%d", &guess);
     if (guess < answer) {
       puts("Too low");
@@ -26,5 +26,5 @@ int main() {
     counter++;
   }
 
-  return 0; // Indicate successful execution
+  return 0;
 }
