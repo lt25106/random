@@ -1,2 +1,9 @@
 * linguist-vendored=false
 * linguist-generated=false
+
+*.groovy linguist-language=groovy
+*.kt linguist-language=kotlin
+*.lua linguist-language=lua
+*.ps1 linguist-language=powershell
+*.py linguist-language=python
+*.scala linguist-language=scala
