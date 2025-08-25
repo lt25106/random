@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class Java {
   public static void main(String[] args) {
     int a = (int) (Math.random() * 102);
     int attempts = 0;
