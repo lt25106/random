@@ -1,0 +1,22 @@
+🏁 🍇
+  🐇 answer: 🔢 = 🐽 rand % 101
+  🐇 guess: 🔢
+  🐇 counter: 🔢 = 1
+
+  ♾ 🍇
+    😀 "Guess the number between 0 and 100 inclusive: " ❗️
+    ➡️ guess ⬅️ ❗️
+
+    ❓ guess < answer 🍇
+      😀 "Too low" ❗️
+    🍉 guess > answer 🍇
+      😀 "Too high" ❗️
+    🍉 🍇
+      😀 "Correct!" ❗️
+      😀 "Guesses taken: \(counter)" ❗️
+      🔚
+    🍉❓
+
+    counter ➕= 1
+  🍉
+🍉
