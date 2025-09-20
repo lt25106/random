@@ -9,7 +9,7 @@ const answer = Math.floor(Math.random() * 101);
 let counter = 1
 
 function askGuess() {
-  rl.question("Guess the number between 0 and 100: ", function(guess) {
+  rl.question("Guess the number between 0 and 100: ", guess => {
     if (guess < answer) {
       console.log("Too low");
       counter++;
