@@ -1,43 +1,25 @@
-// STILL WORK IN PROGRESS
-
 const std = @import("std");
-
 pub fn main() !void {
-    const stdin_file = std.fs.File.stdin();
-    
-    // 1. Get the reader (requires a buffer slice)
-    var br = stdin_file.reader(&.{});
-    
-    // 2. Get the generic interface, then call .any() to get the helper methods
-    const stdin = br.interface.any();
-
-    // Generate random answer
-    var ans: u64 = undefined;
+    const stdout = std.io.getStdOut().writer();
+    const stdin = std.io.getStdIn().reader();
+    var ans: u8 = undefined;
     try std.posix.getrandom(std.mem.asBytes(&ans));
     ans %= 101;
-
+    var count: u8 = 1;
     while (true) {
-        var input: [32]u8 = undefined;
-        std.debug.print("Guess a number between 0 and 100: ", .{});
-
-        // 3. Now readUntilDelimiterOrEof is available on the .any() object
-        if (try stdin.readUntilDelimiterOrEof(&input, '\n')) |line| {
-            const trimmed = std.mem.trim(u8, line, " \r\n");
-            if (trimmed.len == 0) continue;
-
-            const number = std.fmt.parseInt(u64, trimmed, 10) catch {
-                std.debug.print("Invalid number!\n", .{});
-                continue;
-            };
-
-            if (number == ans) {
-                std.debug.print("Correct! The answer was {d}.\n", .{ans});
-                break;
-            } else if (number < ans) {
-                std.debug.print("Too low!\n", .{});
-            } else {
-                std.debug.print("Too high!\n", .{});
-            }
+        try stdout.print("Guess the number from 1 to 100: ", .{});
+        var guess: [4]u8 = undefined;
+        const slice = try stdin.readUntilDelimiter(&guess, '\n');
+        const trimmed = std.mem.trim(u8, slice, " \r\n");
+        const guessu8 = try std.fmt.parseInt(u8, trimmed, 10);
+        if (guessu8 < ans) {
+            try stdout.print("Too low!\n", .{});
+        } else if (guessu8 > ans) {
+            try stdout.print("Too high\n", .{});
+        } else {
+            try stdout.print("Correct!\n Guesses taken: {d}\n", .{count});
+            break;
         }
+        count += 1;
     }
 }
