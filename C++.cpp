@@ -7,16 +7,17 @@ int main() {
   int guess;
   int counter = 1;
   while (true) {
-    cout << "Guess the number between 0 and 100 inclusive: ";
+    cout << "Guess the number between 0 and 100: ";
     cin >> guess;
     if (guess < answer)
-      cout << "Too low!\n";
+      cout << "Too low\n";
     else if (guess > answer)
-      cout << "Too high!\n";
+      cout << "Too high\n";
     else {
-      cout << "Correct! Guesses taken: " << counter;
+      cout << "Correct!\nGuesses taken: " << counter;
       break;
     }
     counter++;
   }
 }
+
