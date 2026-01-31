@@ -3,7 +3,7 @@ int attempts = 0
 
 def myObj = new Scanner(System.in)
 
-while (1) {
+while (true) {
     println "Guess a number from 0 to 102:"
     int userInput = myObj.nextInt()
     attempts++
@@ -13,7 +13,7 @@ while (1) {
     } else if (userInput > a) {
         println "Too High"
     } else {
-        println "You took $attempts attempts"
+        println "You took $attempts attempts."
         break
     }
 }
