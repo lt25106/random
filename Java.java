@@ -8,15 +8,15 @@ public class Java {
     Scanner myObj = new Scanner(System.in);
 
     while (true) {
-      System.out.println("guess a number from 0 to 102:");
+      System.out.println("Guess a number from 0 to 102:");
       int guess = myObj.nextInt();
       attempts++;
       if (guess < a) {
-        System.out.println("too low");
+        System.out.println("Too low!");
       } else if (guess > a) {
-        System.out.println("Too High");
+        System.out.println("Too High!");
       } else {
-        System.out.println("You took " + attempts + " attempts");
+        System.out.println("Correct! You took " + attempts + " guesses.");
         break;
       }
     }
