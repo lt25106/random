@@ -8,6 +8,7 @@ while ((guess != ans)); do
     elif ((guess < ans)); then 
         echo "too low"
     else 
-        echo "You took $attempts attempts"
+        echo "Correct!"
+        echo "Guesses taken: $attempts"
     fi
 done
