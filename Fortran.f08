@@ -1,5 +1,3 @@
-!gfortran -static-libgfortran -static-libgcc random.f08 -o random.exe
-
 program random
 implicit none
   integer :: guess
@@ -14,9 +12,9 @@ implicit none
     print *, 'Guess the number between 0 and 100: '
     read *, guess
     if (guess < answer) then
-      print *, 'Too low!'
+      print *, 'Too low'
     else if (guess > answer) then
-      print *, 'Too high!'
+      print *, 'Too high'
     else
       print *, 'Correct!'
       print *, "Guesses taken: ", counter
