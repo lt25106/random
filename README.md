@@ -65,6 +65,10 @@ groovy Groovy
 ```
 .\Batch.bat
 ```
+# Perl
+```
+perl Perl.pl
+```
 # Scala
 ```
 scala Scala.scala
