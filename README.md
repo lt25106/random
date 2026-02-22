@@ -3,6 +3,11 @@
 gcc Assembly.s
 ./a
 ```
+# COBOL
+```
+cobc Cobol.cbl -x
+./Cobol
+```
 # Zig
 ```
 zig run Zig.zig
