@@ -5,7 +5,7 @@ gcc Assembly.s
 ```
 # COBOL
 ```
-cobc Cobol.cbl -x
+cobc COBOL.cbl -x
 ./Cobol
 ```
 # Zig
@@ -22,9 +22,9 @@ java Java
 rustc Rust.rs
 ./main
 ```
-# Javascript
+# JavaScript
 ```
-node Javascript.js
+node JavaScript.js
 ```
 # Fortran
 ```
