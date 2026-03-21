@@ -3,3 +3,4 @@
 *.o
 D
 *.wasm
+.ghc.environment.x86_64-mingw32-9.6.7
