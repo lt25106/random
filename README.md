@@ -12,6 +12,10 @@ cobc COBOL.cbl -x
 ```
 zig run Zig.zig
 ```
+# Haskell
+```
+runhaskell Haskell.hs
+```
 # Java
 ```
 javac Java.java
