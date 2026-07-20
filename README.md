@@ -94,3 +94,16 @@ lua Lua.lua
 ```
 py Python.py
 ```
+
+# Scratch
+```
+Open Scratch.sb3 in the Scratch editor.
+```
+[Scratch](https://scratch.mit.edu/)
+
+**OR**
+
+```
+winget install -e --id MITMediaLab.Scratch.3
+File > Load from your Computer > Scratch.sb3
+```
